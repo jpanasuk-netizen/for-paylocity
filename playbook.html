@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jeremy Panasuk · Technical Operations Playbook · Paylocity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Sofia+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#f3f0eb; --ink:#313F48; --orange:#FF8F1C; --muted:#898A8D; --paper:#fff; --line:#e4dfd6; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { overflow-x: hidden; }
+    html, body { background: var(--bg); color: var(--ink); font-family: "Sofia Sans", sans-serif; overflow-x: hidden; }
+    a { color: #c45a00; }
+    .wrap { width: min(920px, 100%); margin: 0 auto; padding: 0 24px; }
+    header.nav { position: sticky; top: 0; z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); padding: 14px 0; }
+    header.nav .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .brand { color: var(--ink); text-decoration: none; font-weight: 800; }
+    nav a { margin-left: 16px; text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; text-decoration: none; color: var(--muted); font-family: "IBM Plex Mono", monospace; }
+    .kicker { letter-spacing: 0.16em; text-transform: uppercase; font-size: 12px; color: var(--orange); margin-bottom: 10px; font-family: "IBM Plex Mono", monospace; }
+    h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.05; margin: 8px 0 16px; font-weight: 800; }
+    h2 { font-size: clamp(22px, 3vw, 32px); margin: 0 0 12px; font-weight: 800; }
+    .tag { font-style: italic; font-size: clamp(16px, 1.6vw, 20px); line-height: 1.35; max-width: 44ch; }
+    section { padding: 56px 0; }
+    .lead { max-width: 68ch; line-height: 1.55; color: var(--muted); }
+    .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 22px; }
+    .pillar, .ticket { background: var(--paper); border: 1px solid var(--line); padding: 22px; }
+    .tickets { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 22px; }
+    .ticket b { display: block; font-size: 28px; color: var(--orange); margin-bottom: 6px; font-weight: 800; }
+    .cta { text-align: center; padding: 48px 0 72px; }
+    .btn { display: inline-block; background: var(--orange); color: #fff; text-decoration: none; padding: 12px 18px; text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; margin: 6px; font-family: "IBM Plex Mono", monospace; }
+    footer { border-top: 1px solid var(--line); padding: 20px 0 40px; color: var(--muted); font-size: 14px; }
+    @media (max-width: 800px) { .pillars, .tickets { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="nav"><div class="wrap">
+    <a class="brand" href="./">Paylocity MTO</a>
+    <nav>
+      <a href="./">Packet</a>
+      <a href="playbook.html">Playbook</a>
+      <a href="loyalty.html">Loyalty</a>
+    </nav>
+  </div></header>
+  <section><div class="wrap">
+    <p class="kicker">Implementation · support · written operating path</p>
+    <h1>The deploy-and-stay playbook</h1>
+    <p class="tag">Paylocity’s manager owns analysis, programming, go-live, and the queue after.<br><em>I already write that path before anyone touches config.</em></p>
+    <p class="lead" style="margin-top:18px">Technical Operations is implement-and-stay. The IPS artifacts are that job on paper: what is running, what will hang, how to prove go-live, who on the customer team can run the next wave, and how the support queue hits the SLA without a hero. Payroll and HR data is a new surface. Adoption is the same problem.</p>
+  </div></section>
+  <section><div class="wrap">
+    <p class="kicker">Three surfaces for this role</p>
+    <h2>What the artifacts mean at Paylocity</h2>
+    <div class="pillars">
+      <article class="pillar"><p class="kicker">01</p><h3>Launch so it gets used</h3><p>Environment Summary is the current stack — unofficial definitions, workarounds, the night operator. If implementation does not run on Tuesday, it did not launch. Dawn 8h→1h got used. That is why it was featured.</p></article>
+      <article class="pillar"><p class="kicker">02</p><h3>Date, metric, SLA</h3><p>Upgrade Roadmap + six-class test. Operability, same-data, security, performance, 3rd-party, HA/DR. PepsiCo v9→v10 zero data loss. Micron zero downtime. Support is the same loop with a queue and a clock.</p></article>
+      <article class="pillar"><p class="kicker">03</p><h3>Leave the team ready</h3><p>Named skill-up. Walked loads. QA twin of production. Hypercare is default. Internal teams get a written path so product, eng, and CS are not guessing. Playbooks are how 19/20 stays 19/20.</p></article>
+    </div>
+  </div></section>
+  <section><div class="wrap">
+    <p class="kicker">The receipts in the files</p>
+    <h2>Four floors. Same implement-and-stay loop.</h2>
+    <div class="tickets">
+      <article class="ticket"><b>P1</b><div>Northwestern Mutual</div><p>QA/prod to best practice. GCS in the room. QA twin of production so the next incident does not take the line down.</p></article>
+      <article class="ticket"><b>SQL · XML</b><div>West Bend · Farmers · Ace</div><p>Live SOAP/XML quote path −50%. Guidewire XML. PowerCenter → Big Data with business + QA. Partner integration is not a side quest.</p></article>
+      <article class="ticket"><b>v9→v10</b><div>PepsiCo · Waddell &amp; Reed</div><p>Zero data loss. Measured I/O wait. In-place vs parallel vs clone plus a testing taxonomy. Platform conversion with a written path.</p></article>
+      <article class="ticket"><b>7–14</b><div>SEAL team</div><p>Coaching named in the deliverable. Follow-the-sun. The team praised in the write-up. That is personnel management with receipts.</p></article>
+    </div>
+    <p class="lead" style="margin-top:22px">Full methodology — bottleneck isolation, dos/don’ts, DVO — on the operator campaign: <a href="https://jpanasuk-netizen.github.io/the-closer/playbook.html">the-closer/playbook</a>. Hostnames stay off the public copy.</p>
+  </div></section>
+  <section class="cta"><div class="wrap">
+    <h2>If you want the manager who owns implement-and-stay — this is the operating path.</h2>
+    <a class="btn" href="loyalty.html">Read the loyalty talk</a>
+    <a class="btn" href="./">Back to the packet</a>
+  </div></section>
+  <footer><div class="wrap">Jeremy Panasuk · Manager, Technical Operations · Paylocity · jpanasuk-netizen.github.io/for-paylocity</div></footer>
+</body>
+</html>
