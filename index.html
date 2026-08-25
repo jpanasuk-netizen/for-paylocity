@@ -55,8 +55,8 @@
     .btn.ghost:hover { background: var(--ink); color: #fff; }
     .hero { padding-top: 40px; padding-bottom: 28px; display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 40px; align-items: start; min-width: 0; }
     .hero > div { min-width: 0; }
-    .lede { font-size: clamp(16px, 1.5vw, 19px); line-height: 1.4; max-width: 44ch; margin: 14px 0 12px; }
-    .meta { color: #5c6770; max-width: 54ch; font-size: 15px; }
+    .lede { font-size: clamp(16px, 1.5vw, 19px); line-height: 1.5; max-width: 68ch; margin: 14px 0 12px; }
+    .meta { color: #5c6770; max-width: 68ch; font-size: 15px; line-height: 1.5; }
     .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
     .portrait { border: 1px solid var(--warm); width: 280px; max-width: 100%; background: #fff; }
     .portrait img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 18%; }
@@ -64,7 +64,7 @@
     .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 8px auto 8px; width: min(992px, calc(100% - 48px)); }
     .m { background: #fff; border: 1px solid var(--line); padding: 16px 18px; }
     .m b { display: block; font-size: 26px; color: var(--orange); line-height: 1; font-weight: 800; }
-    .m span { display: block; font-size: 12px; color: var(--grey); margin-top: 6px; letter-spacing: 0.04em; text-transform: uppercase; font-family: "IBM Plex Mono", monospace; }
+    .m span { display: block; font-size: 13px; color: var(--grey); margin-top: 6px; letter-spacing: 0; text-transform: none; font-family: "Sofia Sans", sans-serif; line-height: 1.4; }
     section { padding: 56px 0; }
     .num { font-family: "IBM Plex Mono", monospace; font-size: 12px; letter-spacing: 0.16em; color: var(--orange); }
     .split { display: grid; grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr); gap: 36px; align-items: start; min-width: 0; }
@@ -140,8 +140,8 @@
       <div>
         <p class="kicker">Manager, Technical Operations · Implementation &amp; Support · Remote US</p>
         <h1>Implementation that sticks. Support that <em>does not blink.</em></h1>
-        <p class="lede">Paylocity wants a manager who can lead a technical team through analysis, programming, go-live, and the queue after. That is Informatica IPS / SEAL with a different badge.</p>
-        <p class="meta">Fully remote. High-volume projects. Customer-facing. Integrations, SQL, XML, file transfers. People matter most — I have been the person clients asked for by name. Forward Together is the job I already ran.</p>
+        <p class="lede">Paylocity wants a manager who can lead a technical team through analysis, programming, go-live, and the queue after — on time, high quality, with metrics, across departments. That is Informatica IPS / SEAL with a different badge. I do not throw a mapping over a wall. I sit in the room until it runs, then I stay for the queue. Implementation that the night operator cannot run is customer satisfaction. Implementation they still run in month three is customer loyalty. That is the job after the demo, and it is the only job I have done for twenty years.</p>
+        <p class="meta">Fully remote, United States. High-volume projects. Customer-facing. Partner integrations, SQL, XML, file transfers, SOAP/REST, CDC. People matter most — I have been the person clients asked for by name. I will not claim a Lean Six Sigma belt or a decade inside an HCM product. I will claim repeatable operating paths, control processes I already ran, and last 24 months of measured automation I can put on a support queue. Forward Together is the job I already ran.</p>
         <div class="hero-actions">
           <a class="btn" href="#jd">Open the brief</a>
           <a class="btn ghost" href="JEREMY_PANASUK_PAYLOCITY_COVER.pdf">Cover letter</a>
@@ -155,14 +155,14 @@
     </div>
 
     <div class="metrics">
-      <div class="m"><b>7–14</b><span>People I led · SEAL / Consulting Manager</span></div>
-      <div class="m"><b>19/20</b><span>Crisis accounts recovered</span></div>
-      <div class="m"><b>8h→1h</b><span>Dawn · got used · featured</span></div>
-      <div class="m"><b>11 yrs</b><span>Personnel management · Informatica</span></div>
-      <div class="m"><b>20+ yrs</b><span>Technical / programming / integrate</span></div>
-      <div class="m"><b>SQL · XML</b><span>File transfers · SOAP/REST · CDC</span></div>
+      <div class="m"><b>7–14</b><span>People I led as Consulting Manager — analyst through principal, 1:1s, recruiting, career pathing. IPS called it SEAL.</span></div>
+      <div class="m"><b>19/20</b><span>Crisis accounts recovered. Milwaukee insurer: three-month pile-up closed in two days — one buried IBM DB2 driver.</span></div>
+      <div class="m"><b>8h→1h</b><span>Dawn Foods warehouse load. Featured on informatica.com because the warehouse still ran it.</span></div>
+      <div class="m"><b>11 yrs</b><span>Personnel management at Informatica, 2008–2019. Ladder to Consulting Manager over ten years, then the chair.</span></div>
+      <div class="m"><b>20+ yrs</b><span>Analysis, programming, implementation, and the support queue after. Not a slide manager.</span></div>
+      <div class="m"><b>SQL · XML</b><span>Company-to-company files, SOAP/REST, PowerExchange CDC. The addendum is the closest line to the career.</span></div>
     </div>
-    <div class="band-note"><b>Forward Together.</b> You automate HR and payroll so people can run the company. I automate the path so the implementation still runs on Tuesday — and the support queue still hits the SLA.</div>
+    <div class="band-note"><b>Forward Together.</b> You automate HR and payroll so people can run the company. I automate the path so the implementation still runs on Tuesday — and the support queue still hits the SLA. A go-live without a named owner on the queue is a press release. A go-live with a runbook, a skill-up, and an on-call path is the product after the product.</div>
 
     <section id="role">
       <div class="wrap split">
@@ -173,19 +173,19 @@
         <div class="grid2">
           <article class="cell">
             <h3>Implementation</h3>
-            <p>Navy Federal: architecture through go-live. Harvard: v9 through hypercare. PepsiCo v9→v10, zero data loss. I do not throw a mapping over a wall. I sit in the room until it runs.</p>
+            <p>Navy Federal: architecture through go-live training, a 3,000-hour V1, naming standards written so their team could operate it. Harvard Version 9: resource plan through post-production hypercare, including the Solaris 8.1.1 offload — not just the cutover date. PepsiCo v9→v10 across NA/LATAM with zero data loss. Volkswagen Group of America: complete Grid/HA in two weeks, live demo a day early, four of their consultants shadowing so they could run the next one. I do not throw a mapping over a wall. I sit in the room until it runs.</p>
           </article>
           <article class="cell">
             <h3>Support that recovers</h3>
-            <p>Parachute closer: 20 troubled accounts, 19 recovered. Milwaukee insurer: three months dark, closed in two days. MOBE: 99.99% and on-call command. SLAs are a queue with a name on it.</p>
+            <p>Parachute closer: twenty troubled accounts entered, nineteen recovered. A Milwaukee insurer sat dark for three months; we closed it in two days on one IBM DB2 driver setting buried in IBM documentation. MOBE 2023–24: Talend 8 on a live platform, GitLab CI/CD, Redshift and SQL Server, 99.99% stability, on-call incident command and RCA the next morning. SLAs are a queue with a name on it. If the queue blinks, I did not finish the implement.</p>
           </article>
           <article class="cell">
             <h3>Partner integrations</h3>
-            <p>SOAP/XML, REST, file transfers, CDC, SQL. West Bend live quote path −50%. Farmers Guidewire XML. Giesecke REST/SOAP + Docker. Convert the old path. Leave the new one documented.</p>
+            <p>This addendum is the closest line in the posting to the actual career. SOAP/XML, REST, company-to-company files, PowerExchange CDC, SQL across Oracle / SQL Server / DB2 / Teradata / Redshift. West Bend Mutual: live quote path cut in half. Farmers: Guidewire XML, 30+ repos called as domain risk. Platform conversions: AIX → commodity at Kohl’s (v9 Grid/HA capacity, three-year growth, Senior VPs, ~$2M software, POCs on their data when vendor VMs were not enough), Teradata → Big Data at PepsiCo and Ace Hardware. Convert the old path. Leave the new one documented so the next file does not become a war room.</p>
           </article>
           <article class="cell">
             <h3>A team that can scale</h3>
-            <p>Consulting Manager. Teams of 7–14. Named skill-up. TCS kept the Mercedes playbook. Follow-the-sun. Virtual coaching is not new — distributed delivery is how IPS ran.</p>
+            <p>Consulting Manager. Teams of 7–14, analyst through principal. Recruitment, skill-up, 1:1s, career pathing — IPS called it SEAL. Named skill-up in the write-up so the next site is cheaper. TCS kept the Mercedes playbook. Follow-the-sun with TCS. Virtual coaching is not new: Informatica delivery already ran across India, the UK, New York, and Chicago (MF Global DR). Distributed delivery is how IPS ran. Remote five days is the default I already lived.</p>
           </article>
         </div>
       </div>
@@ -199,22 +199,22 @@
           <article class="ok">
             <div class="n">Knowledge</div>
             <h3>Programming, design, maintenance</h3>
-            <p>PowerCenter, Grid/HA, PowerExchange CDC, Talend 8, SQL, Python, Docker. Scalable platforms: MF Global world-first Grid/HA + DR across four regions.</p>
+            <p>PowerCenter, Grid/HA, PowerExchange CDC, Talend 8, SQL, Python, Docker. MF Global: world-first Informatica Grid/HA plus disaster recovery on RHEL GFS, 20+ nodes across India, the UK, New York, and Chicago — I built DR for the app servers, the databases, and staging, then ran the US DR test. That is design and maintenance on a platform that has to survive a region going dark, not a mapping in a vacuum.</p>
           </article>
           <article class="ok">
             <div class="n">Process</div>
             <h3>Repeatable paths, not heroics</h3>
-            <p>Environment Summary. Upgrade Roadmap. Six-class test. Hypercare default. I do not have a Lean Six Sigma belt. I have written operating paths the next site actually used.</p>
+            <p>Environment Summary — owner and date on the cover, utilization first. Upgrade Roadmap. Six-class test. Hypercare default. I do not have a Lean Six Sigma belt and I will not fake one. I have written operating paths the next site actually used: TCS kept Mercedes, Farmers named the skill-up, Navy Federal got go-live tests. Process is the runbook they keep, not a certification on a slide.</p>
           </article>
           <article class="ok">
             <div class="n">Metrics</div>
             <h3>Accountability you can report</h3>
-            <p>Dawn 8h→1h. Mercedes +200%. West Bend −50%. Micron 2,080h → 7,000h, zero downtime. PepsiCo zero data loss. Numbers the customer signed.</p>
+            <p>Dawn 8h→1h. Mercedes longest workflows +200%. West Bend quote path −50%. Micron 2,080→7,000 hours, zero downtime. PepsiCo zero data loss. Volkswagen complete Grid/HA in two weeks, day early. Numbers the customer signed and still quotes. A manager who cannot put a before-and-after on the board is running a vibe, not a queue.</p>
           </article>
           <article class="ok">
             <div class="n">AI / automation</div>
             <h3>Tools that measure, then help</h3>
-            <p>Last 24 months: private RTX 4070, ~27× local decode after routing, bounded MCP, production agents. Same loop as a support queue: measure the bottleneck before adding people.</p>
+            <p>Last 24 months: private RTX 4070, ~27× local decode after GPU routing (1.39 tok/s CPU baseline to 37.47, logged in SQLite), bounded MCP so an agent sees Docker without becoming host-root, four isolated Python agents handing Pydantic JSON on local Ollama. Same loop as a support queue: measure the bottleneck before you add people. Automation that does not log is another ticket source.</p>
           </article>
         </div>
       </div>
@@ -281,7 +281,7 @@
       <div class="wrap">
         <p class="num">04 — Asked for by name</p>
         <h2>Customer loyalty is the product after the product.</h2>
-        <p class="meta" style="margin:0 0 22px;max-width:56ch;">Paylocity competes on culture and on software people actually use. I gave the loyalty talk at Informatica while still on Dawn’s floor. <a href="loyalty.html">Read it here</a>.</p>
+        <p class="meta" style="margin:0 0 22px;max-width:68ch;">Paylocity competes on culture and on software people actually use. I gave the loyalty talk at Informatica while I was still embedded at Dawn Foods. Satisfaction is the lowest acceptable service — Bank of America chose policy, I left. Loyalty is a number they still quote — Dawn’s warehouse, John told Trillium no over lunch. People matter most is not a poster. It is the metric I already used. <a href="loyalty.html">Read the talk here</a>.</p>
         <div class="quotes">
           <div class="qcard"><p>“His knowledge not only of the Informatica suite but also at the operating system level has been truly invaluable.”</p><div class="src">Dawn Foods · client</div></div>
           <div class="qcard"><p>“He’s a rock star out at Dawn. The customer loves him and the sales team has been leaning on him hard.”</p><div class="src">Informatica IPS · sales</div></div>
